@@ -17,14 +17,18 @@ public class CustomerMailApplication {
     /**
      * @param args the command line arguments
      */
-    private Customer customer;
+    private customermailapplication.Customer customer;
     public void getCustomerTypeFromUser(String customerType) {
         switch(customerType) {
             case "Regular":
                 customer = new RegularCustomer();
                 break;
             //complete MountainCustomer
-            //complete DelinquentCustomer 
+            case "Mountain":
+                customer = new MountainCustomer();
+            //complete DelinquentCustomer
+            case "Delinquent":
+                customer = new DelinquentCustomer();
         }
     }
     public String generateMail() {
